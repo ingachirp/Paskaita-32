@@ -1,10 +1,19 @@
-function manoFunkcija() {
-    // daug intrukciju
-    return "y"
+function add() {
+    const addAnswer = x + y;
+    console.log("add result: " + addAnswer)
+    return addAnswer;
 }
 
-const x = "x";
+const x = 5;
+const y = 7;
 
-const pervardintaFunkcija = manoFunkcija
+const answer = add(x, y);
 
-console.log(pervardintaFunkcija())
+console.log(answer)
+
+const a = 12;
+const b = 13;
+
+const answer2 = add(a, b);
+
+console.log(answer2)
