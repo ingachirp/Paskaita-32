@@ -1,19 +1,34 @@
-function add() {
-    const addAnswer = x + y;
-    console.log("add result: " + addAnswer)
-    return addAnswer;
+function multiplyValues() {
+    const first = getElementNumberValue("first")
+    const second = getElementNumberValue("second")
+    const multipliedValue = first * second;
+    writeResult(multipliedValue)//108
 }
 
-const x = 5;
-const y = 7;
+function divideInputValues() {
+    const first = getElementNumberValue("first")
+    const second = getElementNumberValue("second")
+    const multipliedValue = first / second;
+    writeResult(dividedValue)
+} 
 
-const answer = add(x, y);
+function getElementNumberValue(id) {
+    const firstElement = document.getElementById("first");
+    const valueAsString = firstElement.value;
+    // console.log(valueAsString); //12
+    // const valueType = typeof value; tikrinam value tipa
+    // console.log(valueType);
+    const valueAsNumber = Number(valueAsString);
+    // console.log(typeof valueAsNumber)
+    return valueAsNumber;
+}
 
-console.log(answer)
+function writeResult(result) {
+    const resultParagraph = document.getElementById("result")
+    resultParagraph.innerHTML = "Result is: " + result
+}
+getElementNumberValue()
 
-const a = 12;
-const b = 13;
+// kad funkcija butu kvieciama po migtuko papaudimo
+multiplyValues()
 
-const answer2 = add(a, b);
-
-console.log(answer2)
